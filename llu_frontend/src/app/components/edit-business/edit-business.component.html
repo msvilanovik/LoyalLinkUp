@@ -1,0 +1,59 @@
+<div class="container">
+    <div class="row">
+        <div class="col-6 m-auto">
+            <form [formGroup]="editForm" (ngSubmit) = "editBusiness()">
+                <p class="fs-3 text-center p-3 text-muted">Edit your business</p>
+                <!-- 2 column grid layout with text inputs for the first and last names -->
+                <div class="row mb-4">
+                  <div class="col">
+                    <div class="form-outline">
+                        <label class="form-label" for="form6Example1">Business Name</label>
+                      <input type="text" formControlName="name" class="form-control" />
+                      
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-outline">
+                        <label class="form-label" for="form6Example2">Type of business</label>
+                        <select formControlName="type_of_business" class="form-select" aria-label="Default select example">
+                            <option *ngFor="let type of typeOfBusinesses" value="{{type}}">{{type}}</option>
+                          </select>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- Text input -->
+                <div class="form-outline mb-4">
+                    <label class="form-label" for="form6Example3">City</label>
+                    <input formControlName="city" type="text" id="form6Example4" class="form-control" />
+              
+                </div>
+              
+                <!-- Text input -->
+                <div class="form-outline mb-4">
+                    <label class="form-label" for="form6Example4">Street name</label>
+                  <input formControlName="street_name" type="text" id="form6Example4" class="form-control" />
+                 
+                </div>
+              
+                <!-- Email input -->
+                <div class="form-outline mb-4">
+                     <label class="form-label" for="form6Example5">Street number</label>
+                  <input type="email" formControlName="street_number" id="form6Example5" class="form-control" />
+                 
+                </div>
+              
+                <!-- Number input -->
+                <div class="form-outline mb-4">
+                    <label class="form-label" for="form6Example6">Telephone number</label>
+                  <input type="number" formControlName="phone_number" id="form6Example6" class="form-control" />
+                </div>
+              
+            
+              
+                <!-- Submit button -->
+                <button type="submit" class="btn btn-primary btn-block w-100 mb-4">Edit</button>
+              </form>
+        </div>
+    </div>
+</div>

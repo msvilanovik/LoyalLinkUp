@@ -1,0 +1,117 @@
+<section class="vh-50" style="background-color: #f4f5f7;">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col col-lg-6 mb-4 mb-lg-0">
+         
+          <div class="card mb-3" style="border-radius: .5rem;">
+            <a href="/business/edit/{{business.name}}" class="badge bg-danger btn" style="position: absolute; z-index: 1; right: 1rem; top: -.5rem;" >Edit</a>
+            <div class="row g-0">
+              <div class="col-md-4 gradient-custom text-center text-white"
+                style="border-top-left-radius: .5rem; border-bottom-left-radius: .5rem;">
+                <img src="../../../assets/logo.png"
+                  alt="Avatar" class="img-fluid my-5" style="width: 150px;" />
+                <h5>{{business.name}}</h5>
+                <p>{{business.address.city_name}}</p>
+              
+              </div>
+              <div class="col-md-8">
+                <div class="card-body p-4">
+                  <h6>Information</h6>
+                  <hr class="mt-0 mb-4">
+                  <div class="row pt-1">
+                    <div class="col-6 mb-3">
+                      <h6>Address</h6>
+                      <p class="text-muted">{{business.address.street_name}} {{business.address.street_number}}</p>
+                    </div>
+                    <div class="col-6 mb-3">
+                      <h6>Phone</h6>
+                      <p class="text-muted">{{business.phone_number}}</p>
+                    </div>
+
+                   
+                    <div class="col-6 mb-3">
+                        <h6>Type of business</h6>
+                        <p class="text-muted">{{business.type_of_business}}</p>
+                      </div>
+
+                      <div class="col-6 mb-3">
+                        <h6>Social media</h6>
+                        <div class="d-flex justify-content-start">
+                          <a href="#" class="m-1"><img src="https://cdn.freebiesupply.com/logos/large/2x/facebook-3-logo-png-transparent.png" style="width: 20px" alt="Facebook"></a>
+                          <a href="#" class="m-1"><img src="https://freelogopng.com/images/all_img/1658586823instagram-logo-transparent.png" style="width: 20px" alt="Instagram"></a>
+                          <a href="#" class="m-1"><img src="https://png.pngtree.com/png-vector/20221018/ourmid/pngtree-twitter-social-media-round-icon-png-image_6315985.png" style="width: 20px" alt="Twitter"></a>
+                          </div>
+                      </div>
+
+                  </div>
+                  <h6>Loyalty program</h6>
+                  <hr class="mt-0 mb-4">
+                  <div class="row pt-1">
+                    <div class="col-6 mb-3">
+                        <h6># of loyalty points</h6>
+                        <p class="text-muted">0/10</p>
+                      </div>
+                    <div class="col-6 mb-3">
+                      <h6>Loyalty reward</h6>
+                      <p class="text-muted">Free meal up to 700 denars.</p>
+                    </div>
+
+                    <div class="col-12 mb-3">
+                        <button class="btn w-100 btn-warning">Scan</button>
+                      </div>
+  
+                  </div>
+                
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container-fluid">
+    <div class="row text-center">
+        <div class="col-12 p-2">
+            <h1 >
+                Events
+            </h1>
+        </div>
+        
+        <div *ngFor="let event of events"  class="col-4 p-5">
+
+            <div class="card text-black">
+                <i class="fab fa-apple fa-lg pt-3 pb-1 px-3"></i>
+                <img src="../../../assets/logo.png"
+                         class="card-img-top" alt="Event picture" />
+                <div class="card-body">
+                  <div class="text-center">
+                    <h5 class="card-title">{{event.name}}</h5>
+                    <p class="text-muted mb-4">{{event.type_of_event}}</p>
+                  </div>
+                  <div>
+                    <div class="d-flex justify-content-between">
+                      <span>Capacity</span><span>{{event.capacity}}</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                      <span>Date</span><span>{{event.date_time | date}}</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                      <span>Address</span><span>{{event.business.address.street_name}} {{event.business.address.street_number}}</span>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+
+
+        </div>
+
+
+
+
+    </div>
+  </div>
+
+

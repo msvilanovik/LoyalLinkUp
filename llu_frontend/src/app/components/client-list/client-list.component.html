@@ -1,0 +1,52 @@
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Clients</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let client of clients">
+            <th scope="row">{{client.id}}</th>
+            <td>{{client.name}}</td>
+            <td>{{client.surname}}</td>
+            <td>{{client.phone_number}}</td>
+          </tr>
+    </tbody>
+</table>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Businesses</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let business of businesses">
+            <th scope="row">{{business.id}}</th>
+            <td>{{business.name}}</td>
+            <td>{{business.address.city_name}}</td>
+            <td>{{business.phone_number}}</td>
+          </tr>
+    </tbody>
+</table>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Events</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let event of events">
+            <th scope="row">{{event.id}}</th>
+            <td>{{event.name}}</td>
+            <td>{{event.date_time}}</td>
+            <td>{{event.business.name}}</td>
+            <td>{{event.capacity}} people max!</td> 
+            <td>{{event.type_of_event}}</td>
+          </tr>
+    </tbody>
+</table>
